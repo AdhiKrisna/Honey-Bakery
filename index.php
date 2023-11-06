@@ -1,5 +1,6 @@
 <?php  
     include "functions.php";
+    // aaaaa
     session_start();
 ?>
 
