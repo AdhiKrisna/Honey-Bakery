@@ -1,0 +1,21 @@
+a{
+    font-weight: bold !important;
+    
+}
+.breadType{
+    text-decoration: none !important;
+    color: #4d310f !important;
+}
+label{
+    color: #4d310f !important;
+}
+.card-header{
+    background-color: #E1C78F !important;
+     font-weight:bold; 
+     color:#4d310f !important;
+}
+.card-body{
+    background-color: #E1C78F !important;
+     font-weight:bold; 
+     color:#4d310f !important;
+}
