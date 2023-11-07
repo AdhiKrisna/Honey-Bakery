@@ -82,13 +82,13 @@
     </center>
     <div class="container">
         <div class="row">
-            <div class="col-2">
+            <div class="col-md-2">
                 <center>
                     <div class="card">
                         <div class="card-header" style="font-size:20px;">
                             <a class="breadType" href="index.php">Type Bread</a>
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush my-3">
                             <li class="list-group-item bg-warning-subtle">
                                 <a class="breadType" href="index.php?type=yeast">Yeast Bread</a>
                             </li>
@@ -105,7 +105,7 @@
                     </div>
                 </center>
             </div>
-            <div class="col-10">
+            <div class="col-md-10">
                 <div class="d-flex align-items-center justify-content-center rounded"
                     style="background-color: #E1C78F; font-size:20px; font-weight:bold; height:44px">
                     <a href="index.php" class="breadType">Bread</a>
