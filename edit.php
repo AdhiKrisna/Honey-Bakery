@@ -7,8 +7,6 @@
     $username = $_SESSION['username'];
     $query = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
     $dataEdit = mysqli_fetch_array($query);
-
-    
     ?>
 
 <!doctype html>
