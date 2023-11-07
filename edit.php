@@ -7,6 +7,8 @@
     $username = $_SESSION['username'];
     $query = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
     $dataEdit = mysqli_fetch_array($query);
+
+    
     ?>
 
 <!doctype html>
@@ -63,12 +65,12 @@
             href="login.php">Login</a>
             <?php else: ?>
                 <?php if(isset($_GET['editCake'])): ?>
-                    <a class="nav-link navbar-nav d-flex rounded p-2 mx-3 " href="edit.php">Profile</a>
+                    <a class="nav-link navbar-nav d-flex rounded p-2 mx-3 " href="edit.php?username=<?=$_SESSION['username']?>">Profile</a>
                 <?php else: ?>
-                    <a class="nav-link navbar-nav d-flex rounded p-2 mx-3 " href="edit.php"
+                    <a class="nav-link navbar-nav d-flex rounded p-2 mx-3 " href="edit.php?username=<?=$_SESSION['username']?>"
                     style="background-color: #E1C78F;">Profile</a>
                 <?php endif; ?>
-                <a class="nav-link navbar-nav d-flex mx-3" href="login.php">Logout</a>
+                <a class="nav-link navbar-nav d-flex mx-3" href="logout.php">Logout</a>
             <?php endif ; ?>
 
         </div>

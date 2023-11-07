@@ -57,7 +57,7 @@
 
             <a class="nav-link navbar-nav d-flex rounded p-2 mx-3 "
                 href="edit.php?username=<?=$_SESSION['username']?>">Profile</a>
-            <a class="nav-link navbar-nav d-flex mx-3" href="login.php">Logout</a>
+            <a class="nav-link navbar-nav d-flex mx-3" href="logout.php">Logout</a>
 
         </div>
     </nav>
@@ -66,7 +66,7 @@
         <center class="mt-4">
             <h1 style="color: #4d310f !important;">ADD ORDER</h1>
             <div class="card" style="width: 18rem;">
-                <div class="card-header" style="">
+                <div class="card-header">
                     Customer
                 </div>
                 <div class="card-body bg-warning-subtle">

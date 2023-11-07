@@ -54,7 +54,7 @@
 
             <a class="nav-link navbar-nav d-flex rounded p-2 mx-3 "
                 href="edit.php?username=<?=$_SESSION['username']?>">Profile</a>
-            <a class="nav-link navbar-nav d-flex mx-3" href="login.php">Logout</a>
+            <a class="nav-link navbar-nav d-flex mx-3" href="logout.php">Logout</a>
 
         </div>
     </nav>

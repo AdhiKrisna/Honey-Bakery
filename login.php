@@ -55,8 +55,8 @@
             <a class="nav-link navbar-nav d-flex mx-3 p-2 rounded" style="background-color: #E1C78F;"
                 href="login.php">Login</a>
             <?php else: ?>
-            <a class="nav-link navbar-nav d-flex mx-3" href="login.php">Profile</a>
-            <a class="nav-link navbar-nav d-flex mx-3" href="login.php">Logout</a>
+            <a class="nav-link navbar-nav d-flex mx-3" href="edit.php?username=<?=$_SESSION['username']?>">Profile</a>
+            <a class="nav-link navbar-nav d-flex mx-3" href="logout.php">Logout</a>
             <?php endif ; ?>
 
         </div>
