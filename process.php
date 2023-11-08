@@ -95,6 +95,10 @@
         $totalPrice = 0;
         
         foreach ($_POST['amount'] as $idCake => $quantity) {
+            // var_dump($idCake); 
+            // echo " ";
+            // var_dump($quantity);
+            // echo "<br>";
             if($quantity != ''){
                 $cake = mysqli_query($conn, "SELECT * FROM cake WHERE id_cake = $idCake");
                 $data = mysqli_fetch_array($cake);
@@ -107,9 +111,9 @@
         $addOrder = mysqli_query($conn, "INSERT INTO transaction VALUES ('','$customer',$amountBread,$totalPrice)");
 
         ///take transaction ID
-        $takeTransactionId = mysqli_query($conn, "SELECT * FROM transaction WHERE customer = '$customer' AND amount_bread = $amountBread AND total = $totalPrice");
-        $data = mysqli_fetch_array($takeTransactionId);
-        $transactionID = $data['transaction_id'];
+        // $takeTransactionId = mysqli_query($conn, "SELECT  MAX(transaction_id) as transaction_id FROM transaction");
+        // $data = mysqli_fetch_array($takeTransactionId);
+        // $transactionID = $data['transaction_id'];
 
         //insert into table detail
         foreach ($_POST['amount'] as $idCake => $quantity) {
@@ -117,7 +121,7 @@
                 $cake = mysqli_query($conn, "SELECT * FROM cake WHERE id_cake = $idCake");
                 $data = mysqli_fetch_array($cake);
                 $price = $data['price'] * $quantity;    
-                $detail = mysqli_query($conn, "INSERT INTO detail VALUES ('',$transactionID, $idCake, $quantity, $price)");
+                $detail = mysqli_query($conn, "INSERT INTO detail VALUES ('',(select max(transaction_id) from transaction), $idCake, $quantity, $price)");
             }
         }
         if($_SESSION['username'] == 'admin'){
@@ -136,6 +140,5 @@
             </script>"
         ;
         }
-
     }
 ?>
